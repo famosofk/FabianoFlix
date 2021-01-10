@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.MainFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/mainFragmentHeaderToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/PrimaryRed"
+        style="@style/toolbar_style"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/mainFragmentFooterToolbar"
+        android:background="?attr/colorPrimary"
+        android:backgroundTint="@color/PrimaryTeaLeaf"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:title="github.com/famosofk"
+        app:titleTextColor="@color/white"
+        style="@style/toolbar_style" />
+
+    <TextView
+        android:id="@+id/mainFragmentTitleTextView"
+        android:text="Welcome to \n FabianoFlix"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mainFragmentHeaderToolbar"
+        style="@style/title_style" />
+
+    <EditText
+        android:id="@+id/mainFragmentEmailEditText"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mainFragmentSubtitleTextView"
+        style="@style/stroked_edit_text_style" />
+
+    <TextView
+        android:id="@+id/mainFragmentEmailTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_slab"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/mainFragmentEmailEditText"
+        app:layout_constraintTop_toTopOf="@id/mainFragmentEmailEditText"
+        app:layout_constraintBottom_toBottomOf="@id/mainFragmentEmailEditText"
+        android:text="e-Mail" />
+
+    <EditText
+        android:id="@+id/mainFragmentPasswordEditText"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mainFragmentEmailEditText"
+        style="@style/stroked_edit_text_style" />
+
+    <TextView
+        android:id="@+id/mainFragmentPasswordTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_slab"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/mainFragmentPasswordEditText"
+        app:layout_constraintTop_toTopOf="@id/mainFragmentPasswordEditText"
+        app:layout_constraintBottom_toBottomOf="@id/mainFragmentPasswordEditText"
+        android:text="Password" />
+
+    <Button
+        android:id="@+id/mainFragmentLoginButton"
+        android:backgroundTint="@color/PrimaryTeaLeaf"
+        android:text="GO"
+        app:cornerRadius="800dp"
+        app:layout_constraintBottom_toBottomOf="@id/mainFragmentPasswordEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/mainFragmentPasswordEditText"
+        app:layout_constraintTop_toTopOf="@id/mainFragmentEmailEditText"
+        style="@style/primary_button" />
+
+    <TextView
+        android:id="@+id/mainFragmentSubtitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/roboto_slab"
+        android:text="Already have an account? Sign In!"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mainFragmentTitleTextView" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mainFragmentLoginButton" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:src="@drawable/surprise"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/signInProfileTextView"
+        app:layout_constraintTop_toBottomOf="@id/divider"
+        app:tint="@color/PrimaryTeaLeaf" />
+
+    <TextView
+        android:id="@+id/signInProfileTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="Doesn't have an account yet?"
+        app:layout_constraintBottom_toBottomOf="@id/imageView"
+        app:layout_constraintEnd_toStartOf="@id/imageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/imageView" />
+
+    <Button
+        android:id="@+id/mainFragmentRegisterButton"
+        style="@style/secondary_button"
+        android:text="Join"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView"
+        app:strokeColor="@color/PrimaryTeaLeaf"
+        app:strokeWidth="1dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

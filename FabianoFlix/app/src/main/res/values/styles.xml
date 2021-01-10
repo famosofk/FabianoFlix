@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="title_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:fontFamily">@font/roboto_slab</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="toolbar_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">?attr/actionBarSize</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:theme">?attr/actionBarTheme</item>
+    </style>
+
+    <style name="primary_button">
+        <item name="android:layout_width">64dp</item>
+        <item name="android:layout_height">72dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+    </style>
+
+    <style name="secondary_button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:backgroundTint">@android:color/transparent</item>
+        <item name="android:textColor">@color/PrimaryTeaLeaf</item>
+    </style>
+
+    <style name="stroked_edit_text_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">32dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:background">@drawable/stroke_resource</item>
+        <item name="android:ems">10</item>
+    </style>
+</resources>
