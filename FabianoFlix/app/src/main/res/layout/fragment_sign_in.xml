@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignInFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/signInFragmentHeaderToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/PrimaryRed"
+        style="@style/toolbar_style"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/signInFragmentFooterToolbar"
+        android:background="?attr/colorPrimary"
+        android:backgroundTint="@color/PrimaryTeaLeaf"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:title="github.com/famosofk"
+        app:titleTextColor="@color/white"
+        style="@style/toolbar_style" />
+
+    <TextView
+        android:id="@+id/signInFragmentTitleTextView"
+        style="@style/title_style"
+        android:text="Create an account for free"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/signInFragmentHeaderToolbar" />
+
+    <EditText
+        android:id="@+id/signInFragmentEmailEditText"
+        android:layout_marginBottom="64dp"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/stroked_edit_text_style" />
+
+    <TextView
+        android:id="@+id/signInEmailTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_slab"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/signInFragmentEmailEditText"
+        app:layout_constraintTop_toTopOf="@id/signInFragmentEmailEditText"
+        app:layout_constraintBottom_toBottomOf="@id/signInFragmentEmailEditText"
+        android:text="e-Mail" />
+
+    <EditText
+        android:id="@+id/signInmainFragmentPasswordEditText"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/signInFragmentEmailEditText"
+        style="@style/stroked_edit_text_style" />
+
+    <TextView
+        android:id="@+id/signInPasswordTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_slab"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/signInmainFragmentPasswordEditText"
+        app:layout_constraintTop_toTopOf="@id/signInmainFragmentPasswordEditText"
+        app:layout_constraintBottom_toBottomOf="@id/signInmainFragmentPasswordEditText"
+        android:text="Password" />
+
+    <EditText
+        android:id="@+id/signInmainFragmentProfileEditText"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/signInmainFragmentPasswordEditText"
+        style="@style/stroked_edit_text_style" />
+
+    <TextView
+        android:id="@+id/signInProfileTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_slab"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/signInmainFragmentProfileEditText"
+        app:layout_constraintTop_toTopOf="@id/signInmainFragmentProfileEditText"
+        app:layout_constraintBottom_toBottomOf="@id/signInmainFragmentProfileEditText"
+        android:text="Profile" />
+
+    <Button
+        android:id="@+id/signInCreateButton"
+        android:backgroundTint="@color/PrimaryTeaLeaf"
+        android:text="GO"
+        app:cornerRadius="800dp"
+        app:layout_constraintBottom_toBottomOf="@id/signInmainFragmentProfileEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/signInmainFragmentPasswordEditText"
+        app:layout_constraintTop_toTopOf="@id/signInFragmentEmailEditText"
+        style="@style/primary_button" />
+
+    <TextView
+        android:id="@+id/signInFragmentSubtitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/roboto_slab"
+        android:text="You're only one step behind from \n the ultimate streaming experience"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/signInFragmentTitleTextView" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:src="@drawable/sign_in"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/signInFragmentSubtitleTextView"
+        app:layout_constraintBottom_toTopOf="@id/signInFragmentEmailEditText"
+        tools:layout_editor_absoluteX="43dp"
+        tools:layout_editor_absoluteY="147dp"
+        app:tint="@color/PrimaryTeaLeaf" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
